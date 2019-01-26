@@ -19,12 +19,16 @@ public class Rotater : MonoBehaviour {
         // Store the starting position & rotation of the object
         posOffset = transform.position;
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(1,1,1));
+        rb.AddForce(new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-2f, 2f)));
     }
      
     // Update is called once per frame
     void Update () {
         // Spin object around Y-Axis
-        transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+        transform.Rotate(new Vector3(Time.deltaTime * degreesPerSecond , Time.deltaTime * degreesPerSecond, Time.deltaTime * degreesPerSecond), Space.World);
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        rb.AddForce(new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-2f, 2f)));
     }
 }

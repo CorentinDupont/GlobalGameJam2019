@@ -1,14 +1,48 @@
 fileFormatVersion: 2
-guid: 1cd344ceec28a1f42b5a2829a53ea5ea
+guid: 0ef87e6f54fed9948b47870a5895635e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: feuilles
+    100002: //RootNode
+    100004: pPlane1
+    100006: pPlane2
+    100008: pPlane3
+    100010: pPlane4
+    100012: pPlane5
+    100014: pPlane6
+    100016: vase
+    400000: feuilles
+    400002: //RootNode
+    400004: pPlane1
+    400006: pPlane2
+    400008: pPlane3
+    400010: pPlane4
+    400012: pPlane5
+    400014: pPlane6
+    400016: vase
     2100000: lambert1
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Livre_2:pCube1
+    2300000: pPlane1
+    2300002: pPlane2
+    2300004: pPlane3
+    2300006: pPlane4
+    2300008: pPlane5
+    2300010: pPlane6
+    2300012: vase
+    3300000: pPlane1
+    3300002: pPlane2
+    3300004: pPlane3
+    3300006: pPlane4
+    3300008: pPlane5
+    3300010: pPlane6
+    3300012: vase
+    4300000: vase
+    4300002: pPlane6
+    4300004: pPlane5
+    4300006: pPlane4
+    4300008: pPlane3
+    4300010: pPlane2
+    4300012: pPlane1
   externalObjects: {}
   materials:
     importMaterials: 1
