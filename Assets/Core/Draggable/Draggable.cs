@@ -12,11 +12,14 @@ public class Draggable : MonoBehaviour
 
     public bool isDraggable = true;
 
+    [SerializeField]
+    private Renderer renderer;
+
     // Start is called before the first frame update
     void Start()
     {
         //save inital material
-        initialMaterial = GetComponent<Renderer>().material;
+        initialMaterial = renderer.material;
         initialParent = transform.parent;
     }
 
@@ -27,10 +30,10 @@ public class Draggable : MonoBehaviour
     }
 
     public void targetObject(){
-        GetComponent<Renderer>().material = targetMaterial;
+        renderer.material = targetMaterial;
     }
 
     public void unTargetObject(){
-        GetComponent<Renderer>().material = initialMaterial;
+        renderer.material = initialMaterial;
     }
 }

@@ -16,7 +16,7 @@ public class InventoryItem : MonoBehaviour
     public Material targetMaterial;
 
     [SerializeField]
-    Renderer renderer;
+    private Renderer renderer;
 
     public bool canBeAddedToInventory;
 
