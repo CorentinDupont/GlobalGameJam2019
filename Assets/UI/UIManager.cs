@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
     RectTransform inventoryMenu;
+    [SerializeField]
+    RectTransform itemPreviewPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +38,18 @@ public class UIManager : MonoBehaviour
         inventoryMenu.gameObject.SetActive(false);
         Debug.Log("CLOSE");
 
+    }
+
+    public void previewItem(InventoryItem item){
+        itemPreviewPanel.GetComponentInChildren<Image>().sprite = item.image;
+        openPreviewItemPanel();
+    }
+
+    public void openPreviewItemPanel(){
+        itemPreviewPanel.gameObject.SetActive(true);
+    }
+
+    public void closePreviewItemPanel(){
+        itemPreviewPanel.gameObject.SetActive(false);
     }
 }

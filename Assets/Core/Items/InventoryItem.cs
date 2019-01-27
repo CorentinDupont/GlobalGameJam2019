@@ -15,6 +15,8 @@ public class InventoryItem : MonoBehaviour
     private Material initialMaterial;
     public Material targetMaterial;
 
+    public bool canBeAddedToInventory;
+
     // Start is called before the first frame update
     void Start()
     {
