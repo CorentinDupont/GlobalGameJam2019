@@ -6161,6 +6161,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489118036}
   m_Mesh: {fileID: 4300002, guid: b2b8cc994d5b8d143a020b9f6508a6f8, type: 3}
+--- !u!1 &492465491 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9129212572552666071, guid: c4a70052f211043268f17d9b074c993d,
+    type: 3}
+  m_PrefabInstance: {fileID: 593745937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &492465495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492465491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &492465496
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492465491}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &495335104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: e78e787844d397b4b993e735757d3123,
@@ -7629,6 +7673,50 @@ PrefabInstance:
       objectReference: {fileID: 306950064}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a70052f211043268f17d9b074c993d, type: 3}
+--- !u!1 &597589607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3780778154487350546, guid: c4a70052f211043268f17d9b074c993d,
+    type: 3}
+  m_PrefabInstance: {fileID: 593745937}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &597589611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597589607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &597589612
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597589607}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &619628610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 0ef87e6f54fed9948b47870a5895635e,
