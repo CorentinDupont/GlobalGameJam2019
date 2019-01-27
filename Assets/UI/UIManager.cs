@@ -41,7 +41,7 @@ public class UIManager : MonoBehaviour
     }
 
     public void previewItem(InventoryItem item){
-        itemPreviewPanel.GetComponentInChildren<Image>().sprite = item.image;
+        itemPreviewPanel.Find("Image").GetComponent<Image>().sprite = item.image;
         openPreviewItemPanel();
     }
 

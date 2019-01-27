@@ -15,12 +15,15 @@ public class InventoryItem : MonoBehaviour
     private Material initialMaterial;
     public Material targetMaterial;
 
+    [SerializeField]
+    private Renderer renderer;
+
     public bool canBeAddedToInventory;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialMaterial = GetComponent<Renderer>().material;
+        initialMaterial = renderer.material;
     }
 
     // Update is called once per frame
@@ -30,10 +33,10 @@ public class InventoryItem : MonoBehaviour
     }
 
     public void targetObject(){
-        GetComponent<Renderer>().material = targetMaterial;
+        renderer.material = targetMaterial;
     }
 
     public void unTargetObject(){
-        GetComponent<Renderer>().material = initialMaterial;
+        renderer.material = initialMaterial;
     }
 }
