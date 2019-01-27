@@ -15,12 +15,15 @@ public class ItemGetter : MonoBehaviour
     private UIManager uiManager;
 
     private InventoryItem targetedInventoryItem;
+
+    private GameManager GM;
     
 
     // Start is called before the first frame update
     void Start()
     {
         camera = FindObjectOfType<Camera>();
+        GM = FindObjectOfType<GameManager>();
                
     }
 
@@ -50,6 +53,10 @@ public class ItemGetter : MonoBehaviour
                 GetComponent<Inventory>().addItem(targetedInventoryItem);
                 Destroy(targetedInventoryItem.gameObject);
                 GetComponent<Inventory>().logInventoryItems();
+                
+                if(GM.nextRoom == "roomTwo" && GM.roomOne == false){
+                    FindObjectOfType<RoomOne>().launchActionFor(targetedInventoryItem.gameObject);
+                }
             }else{
                 //preview item
                 uiManager.previewItem(targetedInventoryItem);
