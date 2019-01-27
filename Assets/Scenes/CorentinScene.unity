@@ -2551,31 +2551,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1150293728}
-    - target: {fileID: 5927471062864773254, guid: c4a70052f211043268f17d9b074c993d,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1900
-      objectReference: {fileID: 0}
-    - target: {fileID: 5927471062864773254, guid: c4a70052f211043268f17d9b074c993d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 6338454925414882584, guid: c4a70052f211043268f17d9b074c993d,
         type: 3}
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 1655004470}
-    - target: {fileID: 1671971851998847614, guid: c4a70052f211043268f17d9b074c993d,
-        type: 3}
-      propertyPath: m_CellSize.x
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671971851998847614, guid: c4a70052f211043268f17d9b074c993d,
-        type: 3}
-      propertyPath: m_CellSize.y
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 1194319493742328191, guid: c4a70052f211043268f17d9b074c993d,
         type: 3}
       propertyPath: playerInventory
