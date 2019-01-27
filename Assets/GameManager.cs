@@ -29,19 +29,19 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void validEnigmaOne() {
+    public void validEnigmaOne() {
         enigmaOne = true;
         if(enigmaOne)
             roomOne = true;
     }
 
-    void validEnigmaTwo() {
+    public void validEnigmaTwo() {
         enigmaTwo = true;
         if(enigmaTwo && enigmaThree)
             roomTwo = true;
     }
 
-    void validEnigmaThree() {
+    public void validEnigmaThree() {
         enigmaThree = true;
         if(enigmaTwo && enigmaThree)
             roomTwo = true;
