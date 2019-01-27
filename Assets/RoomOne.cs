@@ -29,7 +29,7 @@ public class RoomOne : MonoBehaviour
         switch(go.name) {
             case "balle_notex":
                 gameManager.validEnigmaOne();
-                // Open the door
+                openDoor.openDoor();
                 return;
             default:
                 return;
