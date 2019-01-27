@@ -276,8 +276,10 @@ GameObject:
   - component: {fileID: 1655004467}
   - component: {fileID: 1655004466}
   - component: {fileID: 1655004468}
+  - component: {fileID: 1655004469}
+  - component: {fileID: 1655004470}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,6 +349,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragDistance: 2
+--- !u!114 &1655004469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655004464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7b504d733b749bd9e703cb7068e4b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getterDistance: 2
+  uiManager: {fileID: 0}
+--- !u!114 &1655004470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655004464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abcf76539e4734e26a2d0d3ec257f09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1879596796
 GameObject:
   m_ObjectHideFlags: 0
