@@ -8,6 +8,10 @@ public class ItemGetter : MonoBehaviour
 
     public int getterDistance;
     private Camera camera;
+
+    [SerializeField]
+    private UIManager uiManager;
+
     private InventoryItem targetedInventoryItem;
     
 
@@ -38,9 +42,16 @@ public class ItemGetter : MonoBehaviour
 
         //Click to add item in inventory
         if (Input.GetMouseButtonDown(0) && targetedInventoryItem != null){
-            GetComponent<Inventory>().addItem(targetedInventoryItem);
-            Destroy(targetedInventoryItem.gameObject);
-             GetComponent<Inventory>().logInventoryItems();
+            if(targetedInventoryItem.canBeAddedToInventory){
+                //add item to inventory
+                GetComponent<Inventory>().addItem(targetedInventoryItem);
+                Destroy(targetedInventoryItem.gameObject);
+                GetComponent<Inventory>().logInventoryItems();
+            }else{
+                //preview item
+                uiManager.previewItem(targetedInventoryItem);
+            }
+            
         }
     }
 }
