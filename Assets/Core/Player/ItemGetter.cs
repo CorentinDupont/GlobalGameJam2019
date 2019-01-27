@@ -9,6 +9,8 @@ public class ItemGetter : MonoBehaviour
     public int getterDistance;
     private Camera camera;
 
+ [SerializeField]
+    private GameObject head;
     [SerializeField]
     private UIManager uiManager;
 
@@ -18,7 +20,8 @@ public class ItemGetter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = FindObjectOfType<Camera>();        
+        camera = FindObjectOfType<Camera>();
+               
     }
 
     // Update is called once per frame
@@ -26,8 +29,8 @@ public class ItemGetter : MonoBehaviour
     {
          //Raycast to hit 
         RaycastHit hitInfo;
-        if(Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInfo, getterDistance)){
-
+        if(Physics.Raycast(head.transform.position, head.transform.forward, out hitInfo, getterDistance)){
+            Debug.Log(hitInfo.transform.gameObject.name);
             //if hit object is type draggable
             if (hitInfo.transform.gameObject.GetComponent<InventoryItem>() && targetedInventoryItem == null) {
                 InventoryItem inventoryItem = hitInfo.transform.gameObject.GetComponent<InventoryItem>();                
