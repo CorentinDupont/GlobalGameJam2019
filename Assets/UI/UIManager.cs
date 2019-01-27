@@ -28,9 +28,12 @@ public class UIManager : MonoBehaviour
 
     private void openInventoryMenu(){
         inventoryMenu.gameObject.SetActive(true);
+        Debug.Log("OPEN");
     }
 
     private void closeInventoryMenu(){
         inventoryMenu.gameObject.SetActive(false);
+        Debug.Log("CLOSE");
+
     }
 }
