@@ -23,8 +23,11 @@ public class UIManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(inventoryMenu.gameObject.activeSelf){
                 closeInventoryMenu();
-            }else{
-                openInventoryMenu();
+            }else if(itemPreviewPanel.gameObject.activeSelf){
+                closePreviewItemPanel();
+            }else
+            {
+                closeInventoryMenu();
             }
         }
     }

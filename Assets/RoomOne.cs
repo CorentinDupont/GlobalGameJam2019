@@ -25,11 +25,11 @@ public class RoomOne : MonoBehaviour
         return gameManager.roomOne;
     }
 
-    void launchActionFor(GameObject go) {
+    public void launchActionFor(GameObject go) {
         switch(go.name) {
             case "balle_notex":
                 gameManager.validEnigmaOne();
-                // Open the door
+                openDoor.openDoor();
                 return;
             default:
                 return;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312013, g: 0.3807403, b: 0.35872707, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3736,7 +3736,7 @@ Transform:
   - {fileID: 915283346}
   - {fileID: 671785122}
   m_Father: {fileID: 758889220}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 194.08199, z: 0}
 --- !u!114 &306950062
 MonoBehaviour:
@@ -7559,7 +7559,7 @@ PrefabInstance:
     - target: {fileID: 6104741239672999117, guid: c4a70052f211043268f17d9b074c993d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6104741239672999117, guid: c4a70052f211043268f17d9b074c993d,
         type: 3}
@@ -7646,6 +7646,51 @@ PrefabInstance:
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 306950064}
+    - target: {fileID: 7508006650300525670, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508006650300525670, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508006650300525670, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_text
+      value: "Items amass\xE9s (Echap pour voir les d\xE9tails)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508006650300525670, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 24.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7508006650300525670, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780778154487350546, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845655517396071256, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_inputSource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845655517396071256, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845655517396071256, guid: c4a70052f211043268f17d9b074c993d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4a70052f211043268f17d9b074c993d, type: 3}
 --- !u!1 &597589607 stripped
@@ -7688,7 +7733,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -9373,9 +9418,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1315797512}
-  - {fileID: 89489664}
   - {fileID: 306950061}
+  - {fileID: 89489664}
+  - {fileID: 1315797512}
   - {fileID: 782269987}
   - {fileID: 2053432149}
   - {fileID: 2044688597}
@@ -17505,10 +17550,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 628386601, guid: f1ffbfc5df07c4f52b22edc1a3dcc074, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.124
-      objectReference: {fileID: 0}
     - target: {fileID: 8489681829797220976, guid: f1ffbfc5df07c4f52b22edc1a3dcc074,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -17539,6 +17580,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b03d6d9d68fc17a49afb22814878fc35, type: 2}
+    - target: {fileID: 628386601, guid: f1ffbfc5df07c4f52b22edc1a3dcc074, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.124
+      objectReference: {fileID: 0}
     - target: {fileID: 632760341820475295, guid: f1ffbfc5df07c4f52b22edc1a3dcc074,
         type: 3}
       propertyPath: gm

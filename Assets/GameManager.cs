@@ -46,4 +46,9 @@ public class GameManager : MonoBehaviour
         if(enigmaTwo && enigmaThree)
             roomTwo = true;
     }
+
+    public MonoBehaviour getCurrentRoom(){
+        
+        return null;
+    }
 }
