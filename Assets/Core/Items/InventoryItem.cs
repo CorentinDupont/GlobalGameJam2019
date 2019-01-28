@@ -12,7 +12,7 @@ public class InventoryItem : MonoBehaviour
     //image shown in inventory menu
     public Sprite image;
 
-    private Material initialMaterial;
+    private Color initialMaterialColor;
     public Material targetMaterial;
 
     [SerializeField]
@@ -23,7 +23,7 @@ public class InventoryItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialMaterial = renderer.material;
+        initialMaterialColor = renderer.material.color;
     }
 
     // Update is called once per frame
@@ -33,10 +33,10 @@ public class InventoryItem : MonoBehaviour
     }
 
     public void targetObject(){
-        renderer.material = targetMaterial;
+        renderer.material.color = targetMaterial.color;
     }
 
     public void unTargetObject(){
-        renderer.material = initialMaterial;
+        renderer.material.color = initialMaterialColor;
     }
 }

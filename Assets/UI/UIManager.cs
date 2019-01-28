@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
                 closePreviewItemPanel();
             }else
             {
-                closeInventoryMenu();
+                openInventoryMenu();
             }
         }
     }

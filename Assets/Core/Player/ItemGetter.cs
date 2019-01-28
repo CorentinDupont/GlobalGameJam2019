@@ -6,7 +6,10 @@ using UnityEngine;
 public class ItemGetter : MonoBehaviour
 {
 
-    public int getterDistance;
+    public float getterDistance;
+    public float radiusDistance;
+
+    public LayerMask layerMask;
     private Camera camera;
 
  [SerializeField]
@@ -32,7 +35,7 @@ public class ItemGetter : MonoBehaviour
     {
          //Raycast to hit 
         RaycastHit hitInfo;
-        if(Physics.Raycast(head.transform.position, head.transform.forward, out hitInfo, getterDistance)){
+        if(Physics.SphereCast(head.transform.position, radiusDistance, head.transform.forward, out hitInfo, getterDistance, layerMask)){
             Debug.Log(hitInfo.transform.gameObject.name);
             //if hit object is type draggable
             if (hitInfo.transform.gameObject.GetComponent<InventoryItem>() && targetedInventoryItem == null) {
@@ -46,8 +49,8 @@ public class ItemGetter : MonoBehaviour
 
         } 
 
-        //Click to add item in inventory
-        if (Input.GetMouseButtonDown(0) && targetedInventoryItem != null){
+        //Click space to add item in inventory
+        if (Input.GetKeyDown(KeyCode.Space) && targetedInventoryItem != null){
             if(targetedInventoryItem.canBeAddedToInventory){
                 //add item to inventory
                 GetComponent<Inventory>().addItem(targetedInventoryItem);
