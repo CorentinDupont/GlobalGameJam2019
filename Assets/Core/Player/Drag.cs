@@ -6,8 +6,15 @@ public class Drag : MonoBehaviour
 {
 
     public int dragDistance;
+    public float radiusDistance;
+    public LayerMask layerMask;
+
     private Camera camera;
+    public GameObject head;
+    [SerializeField]
     private Draggable targetedDraggableObject;
+
+    private Vector3 objectScale;
     private Draggable draggingObject;
     // Start is called before the first frame update
     void Start()
@@ -21,8 +28,8 @@ public class Drag : MonoBehaviour
 
         //Raycast to hit 
         RaycastHit hitInfo;
-        if(Physics.Raycast(camera.transform.position, camera.transform.forward, out hitInfo, dragDistance)){
-
+        if(Physics.SphereCast(head.transform.position, radiusDistance, head.transform.forward, out hitInfo, dragDistance, layerMask)){
+            Debug.Log(hitInfo.transform.gameObject.name);
             //if hit object is type draggable
             if (hitInfo.transform.gameObject.GetComponent<Draggable>()) {
                 Draggable hitDraggableObject = hitInfo.transform.gameObject.GetComponent<Draggable>();
@@ -39,9 +46,11 @@ public class Drag : MonoBehaviour
         }
 
         //Click to make an action on a draggable object
-        if (Input.GetMouseButtonDown(0)){
-            if(targetedDraggableObject != null && draggingObject == null){
+        if (Input.GetKeyDown(KeyCode.Space)){
+            if(targetedDraggableObject != null && draggingObject == null) {
                 //grab the object
+                Debug.Log("dragging" + targetedDraggableObject.gameObject.transform.localScale);
+                objectScale = targetedDraggableObject.gameObject.transform.localScale;
                 targetedDraggableObject.gameObject.transform.parent = this.transform;
                 targetedDraggableObject.gameObject.transform.localPosition = GameObject.Find("DraggableObjectSocket").transform.localPosition;
                 targetedDraggableObject.isDraggable = false;
@@ -49,9 +58,11 @@ public class Drag : MonoBehaviour
                 targetedDraggableObject.unTargetObject();
                 draggingObject = targetedDraggableObject;
                 targetedDraggableObject = null;
-            }else if(targetedDraggableObject == null && draggingObject != null){
+            } else if(targetedDraggableObject == null && draggingObject != null){
                 //leave the object
                 draggingObject.gameObject.transform.parent = draggingObject.initialParent;
+                draggingObject.gameObject.transform.localScale = objectScale;
+                Debug.Log("dragged" + draggingObject.gameObject.transform.localScale);
                 draggingObject.isDraggable = true;
                 draggingObject.GetComponent<Rigidbody>().isKinematic = false;
                 draggingObject = null;
